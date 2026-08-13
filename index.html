@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="TIC TAC FUTBOL: asistente inteligente para aprender y hablar de fútbol.">
+<title>TIC TAC FUTBOL</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">⚽</div>
+  <div><h1>TIC TAC FUTBOL</h1><p>Tu asistente inteligente de fútbol</p></div>
+</header>
+<nav>
+<button onclick="tab('chat')">💬 IA</button>
+<button onclick="tab('tactica')">🧠 Táctica</button>
+<button onclick="tab('voz')">🎤 Voz</button>
+<button onclick="tab('memoria')">💾 Memoria</button>
+<button onclick="tab('premium')">⭐ Premium</button>
+</nav>
+
+<main>
+<section id="chat" class="tab active">
+<h2>Habla con TIC TAC FUTBOL</h2>
+<div id="chatbox" class="chatbox"></div>
+<form id="form"><input id="input" placeholder="Ej.: ¿Qué hace un mediocampista?" autocomplete="off"><button>Enviar</button></form>
+<div class="quick">
+<button data-q="Explícame las posiciones del fútbol">⚽ Posiciones</button>
+<button data-q="Explícame las reglas básicas del fútbol">📖 Reglas</button>
+<button data-q="Explícame la formación 4-3-3">🧠 4-3-3</button>
+</div>
+</section>
+
+<section id="tactica" class="tab">
+<h2>🧠 Pizarra táctica</h2>
+<div class="field">
+<span class="p gk">GK</span><span class="p d1">LB</span><span class="p d2">CB</span><span class="p d3">CB</span><span class="p d4">RB</span>
+<span class="p m1">CM</span><span class="p m2">CM</span><span class="p m3">CM</span>
+<span class="p a1">LW</span><span class="p a2">ST</span><span class="p a3">RW</span>
+</div>
+<p>Formación de ejemplo: 4-3-3.</p>
+</section>
+
+<section id="voz" class="tab">
+<h2>🎤 Habla con la IA</h2>
+<p>Pulsa el botón y, si tu navegador lo admite, habla en español.</p>
+<button id="voiceBtn">🎙️ Hablar</button>
+<p id="heard"></p>
+</section>
+
+<section id="memoria" class="tab">
+<h2>💾 Mis notas</h2>
+<p>Las notas se guardan localmente en este navegador.</p>
+<textarea id="notes" placeholder="Escribe aquí tus apuntes de fútbol..."></textarea>
+<button onclick="saveNotes()">Guardar</button>
+<p id="saved"></p>
+</section>
+
+<section id="premium" class="tab">
+<h2>⭐ TIC TAC FUTBOL Premium</h2>
+<div class="card"><h3>Gratis</h3><p>Chat básico, notas y pizarra táctica.</p></div>
+<div class="card"><h3>Premium — preparado para futuro lanzamiento</h3><p>Ideas de funciones: análisis táctico avanzado, historial ampliado, herramientas educativas y personalización.</p></div>
+<p class="small">El cobro real no está activado en esta versión.</p>
+</section>
+</main>
+
+<footer>© TIC TAC FUTBOL · Proyecto independiente</footer>
+<script src="app.js"></script>
+</body>
+</html>
